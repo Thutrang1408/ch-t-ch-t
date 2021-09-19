@@ -1,0 +1,65 @@
+/ * 3. Trình tải trước * /
+# trình tải trước {
+	vị trí : cố định;
+	đầu : 0 ;
+	trái : 0 ;
+	đúng : 0 ;
+	đáy : 0 ;
+	màu nền : # ef6a8a ; / * thay đổi nếu mặt nạ phải có màu khác thì màu trắng * /
+	chỉ số z : 9999999 ; / * đảm bảo rằng nó luôn ở trên cùng * /
+}
+
+. spinner {
+	vị trí : tuyệt đối;
+	trái : 50 % ; / * căn giữa hoạt ảnh đang tải theo chiều ngang một màn hình * /
+	top : 50 % ; / * căn giữa hoạt ảnh đang tải theo chiều dọc một màn hình * /
+	chiều rộng :  50 px ;
+	chiều cao :  30 px ;
+	text-align : center;
+	kích thước phông chữ :  10 px ;
+	lề trái : -25 px ;
+}
+
+. spinner  >  div {
+	màu nền :  # fff ;
+	chiều cao :  100 % ;
+	chiều rộng :  6 px ;
+	display : inline-block;
+	-webkit-animation : Stretdelay 1,2 s vô hạn dễ dàng vào ra;
+	hoạt ảnh : kéo dài vô hạn 1,2 s dễ dàng vào ra;
+}
+
+. con quay . trực tràng2 {
+	-webkit-animation-delay :  -1,1 s ;
+	animation-delay :  -1,1 s ;
+}
+
+. con quay . trực tràng3 {
+	-webkit-animation-delay :  -1.0 s ;
+	animation-delay :  -1.0 s ;
+}
+
+. con quay . trực tràng4 {
+	-webkit-animation-delay :  -0,9 s ;
+	độ trễ hoạt ảnh :  -0,9 s ;
+}
+
+. con quay . trực tràng5 {
+	-webkit-animation-delay :  -0,8 s ;
+	animation-delay :  -0,8 s ;
+}
+
+@ -webkit-keyframes Stretdelay {
+	0 % ,  40 % , 100% { -webkit-biến đổi :  scaleY ( 0,4 )}  
+	20 % { -webkit-biến đổi :  scaleY ( 1.0 )}
+}
+
+@keyframes Stretdelay {
+	0 % ,  40 % , 100% {
+	biến đổi :  scaleY ( 0,4 );
+	-webkit-biến đổi :  scaleY ( 0.4 );
+	}   20 % {
+	biến đổi :  scaleY ( 1.0 );
+	-webkit-biến đổi :  scaleY ( 1.0 );
+	}
+}
